@@ -26,7 +26,7 @@ pipelines:
                 arguments:
                 - build
                 - -t
-                - django
+                - django:v0.1
                 - .
                 command: docker
                 run_if: passed
