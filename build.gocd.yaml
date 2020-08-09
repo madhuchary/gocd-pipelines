@@ -10,7 +10,7 @@ pipelines:
         git: https://github.com/madhuchary/django-app.git
         shallow_clone: false
         auto_update: true
-        branch: dev
+        branch: master
     stages:
     - docker:
         fetch_materials: true
