@@ -67,7 +67,7 @@ pipelines:
                 - -p
                 - 8000:8000
                 - -v
-                - ${PWD}:/code
+                - /godata/pipelines/publish:/code
                 - --name
                 - django-cnt
                 - django:v0.1
