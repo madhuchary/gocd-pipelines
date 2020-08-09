@@ -4,6 +4,9 @@ pipelines:
     label_template: ${COUNT}
     lock_behavior: none
     display_order: -1
+    environment_variables:
+      GODATA: "godata"
+      PKG_NAME: "django-app-v0_1.zip"
     materials:
       git:
         git: https://github.com/madhuchary/django-app.git
@@ -89,7 +92,7 @@ pipelines:
                 store_id: s3
                 configuration:
                   options:
-                    Destination: django-app-v0_1.zip
+                    Destination: /$GODATA/pipelines/test/$PKG_NAME
                     Source: django-app-v0_1.zip
             tasks:
             - exec:
