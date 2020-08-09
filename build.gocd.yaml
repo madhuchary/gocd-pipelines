@@ -56,47 +56,5 @@ pipelines:
             tasks:
             - exec:
                 arguments:
-                - rm
-                - -f
-                - django-cnt
-                - ||
-                - exit 0
-                command: docker
-                run_if: failed
-            - exec:
-                arguments:
-                - run
-                - -d
-                - -p
-                - 8000:8000
-                - -v
-                - /godata/pipelines/publish:/code
-                - --name
-                - django-cnt
-                - django:v0.1
-                command: docker
-                run_if: failed
-            - exec:
-                arguments:
-                - '30'
-                command: sleep
-                run_if: passed
-            - exec:
-                arguments:
-                - exec
-                - django-cnt
-                - python
-                - manage.py
-                - test
-                command: docker
-                run_if: passed
-            - exec:
-                arguments:
-                - exec
-                - django-cnt
-                - zip
-                - django-app-v0_1.zip
-                - blog
-                - mysite
-                command: docker
-
+                - test.sh
+                command: bash
