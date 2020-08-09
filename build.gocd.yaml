@@ -60,6 +60,7 @@ pipelines:
                 - -f
                 - django-cnt
                 command: docker
+                run_if: any
             - exec:
                 arguments:
                 - run
