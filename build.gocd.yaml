@@ -75,7 +75,7 @@ pipelines:
                 - django-cnt
                 - django:v0.1
                 command: docker
-                run_if: passed
+                run_if: any
             - exec:
                 arguments:
                 - '30'
