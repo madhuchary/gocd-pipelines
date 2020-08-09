@@ -92,8 +92,8 @@ pipelines:
                 store_id: s3
                 configuration:
                   options:
-                    Destination: /$GODATA/pipelines/test/$PKG_NAME
-                    Source: django-app-v0_1.zip
+                    Source: /$GODATA/pipelines/test/$PKG_NAME
+                    Destination: django-app-v0_1.zip
             tasks:
             - exec:
                 arguments:
