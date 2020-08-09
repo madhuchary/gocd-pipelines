@@ -97,6 +97,7 @@ pipelines:
             tasks:
             - exec:
                 arguments:
-                - Thanks GoCD
-                command: echo
+                - /godata/pipelines/test-app/django-app-v0_1.zip
+                - django-app-v0_1.zip
+                command: cp
                 run_if: passed
