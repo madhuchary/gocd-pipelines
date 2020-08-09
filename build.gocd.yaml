@@ -79,7 +79,7 @@ pipelines:
             - exec:
                 arguments:
                 - exec
-                - django
+                - django-cnt
                 - python
                 - manage.py
                 - test
