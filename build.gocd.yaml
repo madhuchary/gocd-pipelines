@@ -1,6 +1,6 @@
 format_version: 3
 pipelines:
-  run:
+  build:
     group: default
     label_template: ${COUNT}
     lock_behavior: none
