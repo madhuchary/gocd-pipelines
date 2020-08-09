@@ -69,6 +69,9 @@ pipelines:
         shallow_clone: false
         auto_update: true
         branch: master
+      upstream:
+        pipeline: test-app
+        stage: test
     stages:
     - publish:
         fetch_materials: true
