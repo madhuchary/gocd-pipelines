@@ -55,6 +55,9 @@ pipelines:
           allow_only_on_success: false
         jobs:
           test:
+          artifacts:
+          - build:
+              source: django-app-v0_1.zip
             timeout: 0
             tasks:
             - exec:
@@ -92,7 +95,7 @@ pipelines:
                 store_id: s3
                 configuration:
                   options:
-                    Source: /godata/pipelines/test-app/django-app-v0_1.zip
+                    Source: django-app-v0_1.zip
                     Destination: django-app-v0_1.zip
             tasks:
             - exec:
