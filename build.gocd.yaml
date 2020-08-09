@@ -1,6 +1,5 @@
-format_version: 3
 pipelines:
-  build:
+  docker-build:
     group: default
     label_template: ${COUNT}
     lock_behavior: none
