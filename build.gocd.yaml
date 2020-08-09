@@ -59,7 +59,7 @@ pipelines:
                 - rm
                 - -f
                 - django-cnt
-                - &&
+                - ||
                 - exit 0
                 command: docker
                 run_if: any
