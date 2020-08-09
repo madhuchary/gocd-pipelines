@@ -66,11 +66,11 @@ pipelines:
                 - -d
                 - -p
                 - 8000:8000
+                - -v
+                - ${PWD}:/code
                 - --name
                 - django-cnt
                 - django:v0.1
-                - -v
-                - ${PWD}:/code
                 command: docker
                 run_if: passed
             - exec:
