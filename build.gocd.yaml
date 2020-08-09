@@ -88,3 +88,9 @@ pipelines:
                   options:
                     Destination: django-app-v0_1.zip
                     Source: django-app-v0_1.zip
+            tasks:
+            - exec:
+                arguments:
+                - Thanks GoCD
+                command: echo
+                run_if: passed
