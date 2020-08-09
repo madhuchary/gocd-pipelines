@@ -56,7 +56,7 @@ pipelines:
         jobs:
           test:
             artifacts:
-          - build:
+            - build:
               source: django-app-v0_1.zip
             timeout: 0
             tasks:
