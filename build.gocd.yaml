@@ -85,4 +85,13 @@ pipelines:
                 - test
                 command: docker
                 run_if: passed
+            - exec:
+                arguments:
+                - exec
+                - django-cnt
+                - zip
+                - django-app-v0_1.zip
+                - blog
+                - mysite
+                command: docker
 
